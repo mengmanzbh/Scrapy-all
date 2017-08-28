@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>普通用户中心</title>
+
+    <!--&lt;!&ndash; Bootstrap &ndash;&gt;-->
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
+
+    <!--&lt;!&ndash; HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries &ndash;&gt;-->
+    <!--&lt;!&ndash; WARNING: Respond.js doesn't work if you view the page via file:// &ndash;&gt;-->
+    <!--&lt;!&ndash;[if lt IE 9]>-->
+      <!--<script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>-->
+      <!--<script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>-->
+    <![endif]-->
+  </head>
+  <body style="text-align: center;background-color: #1abc9c; color: white;">
+  <h1>用户中心</h1>
+<div class="row">
+用户名：{{username}}
+</div>
+<div style="height: 10px;"></div>
+<div>
+  <form method = 'post' action="/update/">
+  <textarea class="form-control" style=" width: 500px; height: 100px;" name="content" placeholder="请输入要定制的关键词">{{content}}</textarea>
+<p style="color: black;font-size: 15px; margin-top: -4px;">说明：多个关键词必须用加号连接，<span style="color: crimson">例如：一带一路+雄安概念+新三板</span></p>
+
+
+            <div style="width:500px;height:20px;margin-top: 8px;margin:auto; font-size: 17px; color: #FFF">最新信息</div>
+           {% for item in newsdata %}
+          <div style="width:500px;height:200px;margin-top: 16px;margin:auto; text-align: left;">
+            <span  style ="font-size:14px;">{{item.time}}--</span>
+              <span style ="font-size:14px;">{{item.source}}--{{item.content}}</span>
+          </div>
+            {% endfor %}
+
+
+  <div>
+    接收通知邮箱：<input type="text" style="width:388px;" class="form-control" name="email" placeholder="请输入接收邮箱" value={{email}} >
+  </div>
+   <div>
+     接收通知手机：<input type="text" style="width:388px;" class="form-control" name="phone" placeholder="请输入接收手机" value={{phone}} >
+  </div>
+
+    <!--<input type="submit" value = "确定" style="width:500px;height:150px;" />-->
+
+    <div class="btn-group" role="group">
+      <button type="submit" class="btn btn-default" style="width:500px;height:29px;margin-top: 16px;">确定</button>
+    </div>
+</div>
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
