@@ -1,0 +1,19 @@
+[INFO  - 2017-06-16T14:01:39.206Z] GhostDriver - Main - running on port 54401
+[INFO  - 2017-06-16T14:01:40.114Z] Session [51ef1bd0-529c-11e7-a76a-7b16853ef1ec] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Unknown; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-06-16T14:01:40.115Z] Session [51ef1bd0-529c-11e7-a76a-7b16853ef1ec] - page.customHeaders:  - {}
+[INFO  - 2017-06-16T14:01:40.115Z] Session [51ef1bd0-529c-11e7-a76a-7b16853ef1ec] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"linux-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-06-16T14:01:40.115Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 51ef1bd0-529c-11e7-a76a-7b16853ef1ec
+[ERROR - 2017-06-16T14:01:40.859Z] Session [51ef1bd0-529c-11e7-a76a-7b16853ef1ec] - page.onError - msg: TypeError: undefined is not a function (evaluating '$(this).text().append("\n")')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-06-16T14:01:40.860Z] Session [51ef1bd0-529c-11e7-a76a-7b16853ef1ec] - page.onError - stack:
+  (anonymous function) (http://www.neeq.com.cn/disclosure/announcement.html:262)
+  each (http://www.neeq.com.cn/template/1/bluewise/_files/js/jquery-1.11.1.min.js:2)
+  each (http://www.neeq.com.cn/template/1/bluewise/_files/js/jquery-1.11.1.min.js:2)
+  success (http://www.neeq.com.cn/disclosure/announcement.html:259)
+  l (http://www.neeq.com.cn/template/1/bluewise/_files/js/jquery-1.11.1.min.js:2)
+  fireWith (http://www.neeq.com.cn/template/1/bluewise/_files/js/jquery-1.11.1.min.js:2)
+  T (http://www.neeq.com.cn/template/1/bluewise/_files/js/jquery-1.11.1.min.js:2)
+  r (http://www.neeq.com.cn/template/1/bluewise/_files/js/jquery-1.11.1.min.js:2)
+
+  phantomjs://platform/console++.js:263 in error
